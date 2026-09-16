@@ -102,7 +102,7 @@ function NavigationMenuLink({
 }
 
 function NavigationMenuIndicator({
-  className,
+  className, 
   ...props
 }: React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.Icon>) {
   return (
