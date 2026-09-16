@@ -1,4 +1,8 @@
+import { Button } from "@/components/ui/button";
+
 export default function page() {
-  return <div>Hi</div>;
+  return <div className=" font-sans">contact me
+  <Button variant='default'>contact</Button>
+  </div>;
 }
 
