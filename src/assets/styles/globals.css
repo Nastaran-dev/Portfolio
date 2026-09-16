@@ -17,11 +17,21 @@
     #6a78e5 50%,
     #54c4e5 100%
   );
+  --color-gradient-text: linear-gradient(
+    90deg,
+    #943ae5 0%,
+
+    #54c4e5 0%,
+    #6a78e5 15%
+  );
   --secondary-gradient: linear-gradient(
     to bottom,
     rgba(153, 51, 229, 1),
     rgba(51, 204, 229, 1)
   );
+  --landing-gradient:
+    radial-gradient(circle at 55% 35%, #8b2ba3 0%, transparent 45%),
+    linear-gradient(110deg, #241a37 0%, #39204f 45%, #544a81 100%);
   --secondary-dark: #251c31;
   --primary: oklch(0.6 0.2 300);
   --primary-foreground: oklch(0.985 0 0);
@@ -93,9 +103,10 @@
   --color-background: var(--primary-gradient);
   --background-image-primary-gradient: var(--primary-gradient);
   --background-image-secondary-gradient: var(--secondary-gradient);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-red-hat);
-  --font-mono: var(--font-geist-mono);
+  --background-image-landing-gradient: var(--landing-gradient);
+  --background-image-color-gradient: var(--color-gradient-text);
+  --font-josefin: var(--font-josefin-custom);
+  --font-inter: var(--font-inter-custom);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -147,16 +158,11 @@
   --font-size-3xl: 30px;
   --font-size-4xl: 36px;
   --font-size-5xl: 48px;
+  --font-size-6xl: 90px;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
+    @apply bg-background;
   }
 }

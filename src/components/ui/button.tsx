@@ -1,19 +1,18 @@
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
-import { redHatDisplay } from "@/assets/fonts/JosefinSans/fonts";
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 font-sans tracking-wider capitalize ",
+  "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 tracking-wider capitalize font-josefin cursor-pointer",
   {
     variants: {
       variant: {
         default:
-          "bg-primary-gradient text-primary-foreground hover:bg-primary-gradient/80",
+          "bg-primary-gradient text-primary-foreground hover:bg-primary-gradient/90 hover:transition-colors",
         secondary:
-          "bg-secondary-dark text-primary-foreground hover:bg-secondary-dark/80",
+          "bg-secondary-dark text-primary-foreground hover:bg-secondary-dark/90 hover:transition-colors",
         accent:
-          "bg-primary-gradient text-primary-foreground hover:bg-primary-gradient/80",
+          "bg-primary-gradient text-primary-foreground hover:bg-primary-gradient/90 hover:transition-colors",
       },
       size: {
         default:
@@ -44,7 +43,6 @@ function Button({
     <ButtonPrimitive
       data-slot="button"
       className={cn(
-        redHatDisplay.variable,
         buttonVariants({ variant, size, className }),
       )}
       {...props}
