@@ -7,11 +7,11 @@ export default function Hero() {
   return (
     <div className="w-full flex justify-center px-xl items-center">
 
-      <div className="w-1/2 flex flex-col gap-6 p-28">
+      <div className="w-1/2 flex flex-col gap-lg p-28">
 
         <div className="flex flex-col gap-3">
 
-          <h1 className="text-6xl text-white">
+          <h1 className="text-6xl text-white font-semibold">
             Hi, I’m Nastaran
           </h1>
 
@@ -32,6 +32,7 @@ export default function Hero() {
           text-white 
           text-lg 
           leading-8
+          font-normal
         ">
           A self-taught front-end developer with over 2 months of experience,
           I build responsive and user-friendly websites & app.

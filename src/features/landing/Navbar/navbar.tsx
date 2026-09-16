@@ -12,7 +12,7 @@ import { navigationItems } from "@/constant/navigation";
 export default function navbar() {
   return (
     <NavigationMenu className="max-w-none uppercase">
-      <NavigationMenuList className="flex gap-20 items-center">
+      <NavigationMenuList className="flex gap-7xl items-center">
         {navigationItems.slice(0, 2).map((item) => (
           <NavigationMenuItem key={item.label}>
             <NavigationMenuLink
@@ -26,7 +26,7 @@ export default function navbar() {
 
         <NavigationMenuItem>
           <Image
-          className="mt-3"
+          className="mt-md"
             src={Rectangle}
             alt="Nastaran logo"
             width={196}
